@@ -6,6 +6,9 @@
     "type": "git",
     "url": "git://github.com/jed/localhose.git"
   },
+  "bin" : {
+    "localhose" : "./cli.js"
+  },
   "engines": [
     "node"
   ],

@@ -15,7 +15,7 @@ Localhose is a [node.js](http://nodejs.org/) module that provides a simple API f
 
     $ npm install localhose
     
-## API
+## Module API
 
 ### localhose = require( "localhose" )
 
@@ -34,6 +34,16 @@ Removes some or all of the hosts rerouted to your machine. If no arguments are s
 ### localhose.domains()
 
 Returns a list of domains currently being rerouted to `127.0.0.1`
+
+## Command-line API
+
+### $ sudo localhose set host1 [host2] [etc]
+
+Same as `localhose.set`, but for the command line.
+
+### $ sudo localhose unset [host1] [host2] [etc]
+
+Same as `localhose.unset`, but for the command line.
 
 ## Example
 
