@@ -64,7 +64,6 @@ For an example rerouting `nodejs.org` to your machine, see [test.js](/jed/localh
 ## TODO
 
 * Add support for non-OS X systems if anyone's interested.
-* A command-line API
 
 Copyright
 ---------
