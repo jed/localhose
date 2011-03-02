@@ -1,6 +1,16 @@
 {
   "name": "localhose",
   "version": "0.0.1",
-  "description": "Local DNS hosing for easy development",
+  "description": "Hose your hosts file for easier local web development",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jed/localhose.git"
+  },
+  "engines": [
+    "node"
+  ],
+  "directories": {
+    "lib": "./lib"
+  },
   "main": "./index"
 }
