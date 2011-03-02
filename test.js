@@ -1,3 +1,11 @@
+// Any file using Localhose needs to be run
+// with superuser permissions, a la:
+//
+// sudo node ./test.js
+//
+// In this test, we reroute nodejs.org to our
+// local server for comedic effect.
+
 var assert = require( "assert" )
   , http = require( "http" )
   , localhose = require( "localhose" ).unset()

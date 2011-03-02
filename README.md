@@ -37,6 +37,9 @@ Returns a list of domains currently being rerouted to `127.0.0.1`
 
 ## Example
 
+For an example rerouting `nodejs.org` to your machine, see [test.js](/jed/localhose/blob/master/test.js). Otherwise, usage is basically like this:
+
+    // sudo node ./someFile.js
     localhose = require( "localhose" )
     
     // resolve "google.com" and "google.org" to 127.0.0.1.
@@ -51,6 +54,7 @@ Returns a list of domains currently being rerouted to `127.0.0.1`
 ## TODO
 
 * Add support for non-OS X systems if anyone's interested.
+* A command-line API
 
 Copyright
 ---------

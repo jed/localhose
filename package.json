@@ -2,6 +2,5 @@
   "name": "localhose",
   "version": "0.0.1",
   "description": "Local DNS hosing for easy development",
-
   "main": "./index"
 }
