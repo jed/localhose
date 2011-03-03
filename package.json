@@ -1,6 +1,6 @@
 {
   "name": "localhose",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Hose your hosts file for easier local web development",
   "repository": {
     "type": "git",
