@@ -23,13 +23,20 @@ Returns a global `localhose` object that keeps track of what domains are being r
 
 ### localhose.set( host1, [host2], [etc] )
 
-Adds one or more hosts to be routed to your local machine. If no hosts are currently being rerouted, a copy of the current `hosts` file is backed up at `/private/etc/hosts.localhoseBackup`. Every time a host is added or removed, this file is appended with the added hosts and saved over the current `hosts` file.
+Adds one or more hosts to be routed to your local machine. The hosts are stored within the existing hosts file, like this:
 
-The path of the host file and suffix of the backup host file can be specified respectively using `hostsPath` and `backupSuffix` properties of the `localhose.constructor.prototype` object.
+    # <localhose>
+    # The following have been added temporarily by Localhose
+    # For more information, see https://github.com/jed/localhose
+    127.0.0.1	yourdomain.com
+    127.0.0.1	yourdomain.net
+    # </localhose>
+
+The path of the host file can be specified using the `hostsPath` property of the `localhose.constructor.prototype` object.
 
 ### localhose.unset( [host1], [host2], [etc] )
 
-Removes some or all of the hosts rerouted to your machine. If no arguments are specified, all currently hosts are unset. If no hosts remain after this is called, the current `hosts` file is overwritten with the backup taken when the first host was written, and then the backup `hosts` file is deleted, leaving your file system as pristine as it was before.
+Removes some or all of the hosts rerouted to your machine. If no arguments are specified, all currently hosts are unset. If no hosts remain after this is called, the `# <localhose> ... # </localhose>` section of the current `hosts` file is removed, leaving your file system as pristine as it was before.
 
 ### localhose.domains()
 
