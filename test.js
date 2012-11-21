@@ -8,7 +8,7 @@
 
 var assert = require( "assert" )
   , http = require( "http" )
-  , localhose = require( "localhose" ).unset()
+  , localhose = require( "./lib/localhose" ).unset()
   
   , url = require( "url" ).parse( "http://nodejs.org/" )
   , sassyTitle = "rYah'S aweSOmE homEpagE!"
@@ -63,6 +63,6 @@ function getTitle( uri, cb ) {
   http.get( url, function( res ) {
     res
       .on( "data", function( data ){ body += data } )
-      .on( "end", function(){ cb( ( /<title>([^<]+)/( body ) || [] )[ 1 ] ) } )
+      .on( "end", function(){ cb( ( /<title>([^<]+)/.exec( body ) || [] )[ 1 ] ) } )
   })
 }
