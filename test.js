@@ -9,7 +9,7 @@
 var assert = require( "assert" )
   , http = require( "http" )
   , localhose = require( "./lib/localhose" ).unset()
-  
+
   , url = require( "url" ).parse( "http://nodejs.org/" )
   , sassyTitle = "rYah'S aweSOmE homEpagE!"
 
@@ -23,7 +23,7 @@ getTitle( url, function( title ) {
   console.log( "- actual title:   " + title )
 
   assert.equal( title, "node.js" )
-  
+
   localhose.set( url.host )
 
   getTitle( url, function( title ) {
@@ -39,7 +39,7 @@ getTitle( url, function( title ) {
       console.log( "\nfetching title for " + url.host )
       console.log( "- expected title: node.js" )
       console.log( "- actual title:   " + title )
-    
+
       assert.equal( title, "node.js" )
 
       server.close()
