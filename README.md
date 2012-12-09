@@ -14,7 +14,7 @@ Localhose is a [node.js](http://nodejs.org/) module that provides a simple API f
 ## Install
 
     $ npm install localhose
-    
+
 ## Module API
 
 ### localhose = require( "localhose" )
@@ -33,6 +33,10 @@ Adds one or more hosts to be routed to your local machine. The hosts are stored 
     # </localhose>
 
 The path of the host file can be specified using the `hostsPath` property of the `localhose.constructor.prototype` object.
+
+### localhose.add( [host1], [host2], [etc] )
+
+Adds additional domain(s) the the <localhose> section of your hosts file but will not overwrite any existing hosts in <localhose> section.
 
 ### localhose.unset( [host1], [host2], [etc] )
 
@@ -58,13 +62,13 @@ For an example rerouting `nodejs.org` to your machine, see [test.js](/jed/localh
 
     // sudo node ./someFile.js
     localhose = require( "localhose" )
-    
+
     // resolve "google.com" and "google.org" to 127.0.0.1.
     // note that you will be unable to use google while this is set.
     localhose.set( "google.com", "google.org" )
-    
+
     localhose.domains() // [ "google.com", "google.org" ]
-    
+
     // remove all domains, and revert the `hosts` file to its original state
     localhose.unset( "google.com" )
 
