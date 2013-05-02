@@ -1,5 +1,4 @@
-Localhose
-=========
+# DEPRECATED - Please use [local-tld](https://github.com/hoodiehq/local-tld) instead.
 
 Localhose is a [node.js](http://nodejs.org/) module that provides a simple API for dynamically adding hosts to the `/etc/hosts` file, to fool your web browser into thinking `anydomain.com` points to your local machine. This makes web development easier, since the local build and production build can now use identical URLs.
 
